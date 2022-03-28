@@ -5,7 +5,7 @@ import { useCart } from '../hooks/useCart';
 function Header(props) {
   const { totalPrice } = useCart()
   return (
-    <header className="d-flex justify-between align-center p-40">
+    <header className="d-flex justify-between align-center p-40 mobile">
       <Link to="/">
         <div className="d-flex align-center">
           

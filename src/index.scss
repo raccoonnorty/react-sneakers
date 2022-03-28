@@ -192,3 +192,9 @@ header {
     opacity: 1;
   }
 }
+
+@media (max-width: 735px) {
+  .mobile {
+    flex-direction: column;
+  }
+}
