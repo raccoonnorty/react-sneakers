@@ -128,7 +128,7 @@ function App() {
           <Route path="favorites" element={
             <Favorites />
             } exact />
-          <Route path="" element={
+          <Route path="/" element={
             <Home 
             items={items}
             cartItems={cartItems}
