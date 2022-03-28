@@ -39,7 +39,7 @@ function Drawer({ onClose, onRemove, items = [], opened }) {
         <div className={styles.drawer}>
             <h2 className="d-flex justify-between mb-30">
             Корзина
-            <img onClick={onClose} className="remove-btn" src="/img/btn-remove.svg" alt="Close" />
+            <img onClick={onClose} className="remove-btn" src="img/btn-remove.svg" alt="Close" />
             </h2>
             
             {
@@ -54,7 +54,7 @@ function Drawer({ onClose, onRemove, items = [], opened }) {
                         <p className="mb-5">{obj.name}</p>
                         <b>{obj.price} руб.</b>
                       </div>
-                      <img onClick={() => onRemove(obj.id)} className="remove-btn" src="/img/btn-remove.svg" alt="Remove" />
+                      <img onClick={() => onRemove(obj.id)} className="remove-btn" src="img/btn-remove.svg" alt="Remove" />
                     </div>
                     ))}
                   </div>
@@ -72,14 +72,14 @@ function Drawer({ onClose, onRemove, items = [], opened }) {
                         <b>{(totalPrice / 100) * 5} руб. </b>
                       </li>
                     </ul>
-                    <button disabled={isLoading} onClick={onClickOrder} className="green-btn">Оформить заказ<img src="/img/arrow.svg" alt="Arrow" /></button>
+                    <button disabled={isLoading} onClick={onClickOrder} className="green-btn">Оформить заказ<img src="img/arrow.svg" alt="Arrow" /></button>
                   </div>
                 </div>
               ) : (
                 <Info
                   title={isOrderComplete ? "Заказ оформлен" : "Корзина пустая"}
                   description={isOrderComplete ? `Ваш заказ #${orderId} скоро будет передан курьерской доставке` : "Добавте хотя бы одну пару кросовок, чтобы сделать заказ."}
-                  image={isOrderComplete ? "/img/complete-order.jpg" : "/img/empty-cart.jpg"}
+                  image={isOrderComplete ? "img/complete-order.jpg" : "img/empty-cart.jpg"}
                 />
               )
               
