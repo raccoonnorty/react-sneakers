@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { HashRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+
 import './index.scss';
 import 'macro-css';
+
 import App from './App';
 
 ReactDOM.render(

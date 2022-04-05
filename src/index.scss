@@ -2,7 +2,12 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ddffe6;
+  background-blend-mode: screen;
+	background:linear-gradient(limegreen, transparent),
+    linear-gradient(45deg,#ee4d98, transparent),
+    linear-gradient(-45deg,#25085a, transparent),
+		linear-gradient(90deg, skyblue, transparent),
+		linear-gradient(-90deg, coral, transparent);
 }
 
 * {
@@ -196,5 +201,21 @@ header {
 @media (max-width: 735px) {
   .mobile {
     flex-direction: column;
+  }
+  
+  header {
+    ul {
+      margin-top: 30px !important;
+    }
+  }
+
+  .header-info {
+    text-align: center;
+  }
+
+  .content {
+    h1 {
+      margin-bottom: 20px;
+    }
   }
 }

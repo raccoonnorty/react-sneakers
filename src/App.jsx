@@ -122,13 +122,13 @@ function App() {
         />
         <Header onClickCart={() => setCartOpened(true)} />
         <Routes>
-          <Route path="orders" element={
+          <Route path={process.env.PUBLIC_URL + '/orders'} element={
             <Orders />
             } exact />
-          <Route path="favorites" element={
+          <Route path={process.env.PUBLIC_URL + '/favorites'} element={
             <Favorites />
             } exact />
-          <Route path="" element={
+          <Route path={process.env.PUBLIC_URL + '/'} element={
             <Home 
             items={items}
             cartItems={cartItems}
