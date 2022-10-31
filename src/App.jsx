@@ -51,6 +51,7 @@ function App() {
         setCartItems(prev => prev.filter(item => Number(item.parentId) !== Number(obj.id)))
         await axios.delete(`https://622e56678d943bae34938260.mockapi.io/cart/${findItem.id}`)
       } else {
+        setCartItems((prev) => [...prev, obj]);
         const { data } = await axios.post('https://622e56678d943bae34938260.mockapi.io/cart', obj)
         setCartItems(prev => prev.map(item => {
           if (item.parentId === data.parentId) {
